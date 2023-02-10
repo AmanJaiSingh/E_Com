@@ -9,7 +9,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { publicRequest } from "../requestMethods";
-import { addProduct } from "../redux/cartRedux";
+import { addProduct, removeProduct } from "../redux/cartRedux";
 import { useDispatch } from "react-redux";
 
 const Product = () => {
@@ -34,6 +34,7 @@ const Product = () => {
   const handleClick = () => {
     //update cart
     dispatch(addProduct({ ...product, quantity, color, size }));
+    // dispatch(removeProduct());
   };
 
   return (

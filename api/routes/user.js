@@ -5,6 +5,11 @@ const {
 } = require("./verifyToken");
 const cryptoJS = require("crypto-js");
 const User = require("../models/User");
+//User create Register----(login)
+
+//user ka data change
+//user ko delete
+//user ka data get
 
 //UPDATE
 router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {

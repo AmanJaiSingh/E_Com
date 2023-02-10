@@ -49,9 +49,7 @@ const ProductList = () => {
             name="size"
             onChange={handleFilters}
           >
-            <option disabled selected>
-              Size
-            </option>
+            <option disabled>Size</option>
             <option>XS</option>
             <option>S</option>
             <option>M</option>

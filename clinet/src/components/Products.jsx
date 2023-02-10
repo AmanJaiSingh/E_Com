@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { popularProducts } from "../data/data1";
+// import { popularProducts } from "../data/data1";
 import Product from "./Product";
 import axios from "axios";
 
@@ -16,12 +16,14 @@ const Products = ({ cat, filters, sort }) => {
             : `http://localhost:5000/api/products`
         );
         setProducts(res.data);
+        console.log(res.data);
       } catch (err) {}
     };
     getProduct();
   }, [cat]);
 
   useEffect(() => {
+    console.log({ products, message: "Error" });
     cat &&
       setFilteredProducts(
         products.filter((item) =>
@@ -51,9 +53,7 @@ const Products = ({ cat, filters, sort }) => {
     <div className="cont_product">
       {cat
         ? filteredProducts.map((item) => <Product item={item} key={item.id} />)
-        : products
-            .slice(0, 8)
-            .map((item) => <Product item={item} key={item.id} />)}
+        : products.map((item) => <Product item={item} key={item.id} />)}
     </div>
   );
 };

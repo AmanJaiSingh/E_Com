@@ -1,14 +1,23 @@
 import Add from "@mui/icons-material/Add";
 import Remove from "@mui/icons-material/Remove";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
-
+import StripeCheckout from "react-stripe-checkout";
+import { userRequest } from "../requestMethods";
+import { useNavigate } from "react-router-dom";
+import { removeProduct } from "../redux/cartRedux.js";
+import { useDispatch } from "react-redux";
+// const stripePromise = loadStripe(process.env.REACT_APP_STRIPE);
 const Cart = () => {
+  const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
+  const user = useSelector((state) => state.user.currentUser._id);
+  // console.log(user);
+  const navigate = useNavigate();
   console.log(cart);
   return (
     <div>
@@ -51,9 +60,23 @@ const Cart = () => {
                 </div>
                 <div className="price_det">
                   <div className="p_a_con">
-                    <Add />
+                    <div
+                      className="cursor-pointer"
+                      onClick={() => {
+                        product.quantity += 1;
+                      }}
+                    >
+                      <Add />
+                    </div>
                     <div>{product.quantity}</div>
-                    <Remove />
+                    <div
+                      className="cursor-pointer"
+                      onClick={() => {
+                        dispatch(removeProduct(product));
+                      }}
+                    >
+                      <Remove />
+                    </div>
                   </div>
                   <div className="p_price">Rs {product.price}</div>
                 </div>
@@ -78,10 +101,11 @@ const Cart = () => {
               <span>Total</span>
               <span>Rs {cart.total}</span>
             </div>
-            <button> CheckOut</button>
+            <button>Check Out</button>
           </div>
         </div>
       </div>
+      <Newsletter />
       <Footer />
     </div>
   );

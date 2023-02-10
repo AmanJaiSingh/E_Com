@@ -15,10 +15,10 @@ const Navbar = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container bg-red-300">
       <div className="Wrap flex justify-between items-center">
         <div className=" flex-1 flex items-center">
-          <spam className="text-xs lan cursor-pointer">EN</spam>
+          <h1 className="text-xs lan cursor-pointer">EN</h1>
           <div className="Search_containeer">
             <input className="outline-none" placeholder="Search"></input>
             <Search style={{ color: "gray", fontSize: "16px" }} />
@@ -46,7 +46,7 @@ const Navbar = () => {
           <Link to="/cart">
             <div className="MenuItems">
               <Badge badgeContent={quantity} color="primary">
-                <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
+                <ShoppingCartOutlinedIcon className="mt-2"></ShoppingCartOutlinedIcon>
               </Badge>
             </div>
           </Link>

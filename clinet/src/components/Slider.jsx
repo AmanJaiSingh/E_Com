@@ -4,7 +4,7 @@ import { useState } from "react";
 import { sliderItems } from "../data/data1";
 
 const Slider = () => {
-  const [sliderIndex, setSliderIndex] = useState(0);
+  const [sliderIndex, setSliderIndex] = useState(2);
   const handleClick = (dir) => {
     if (dir === "left") {
       setSliderIndex(sliderIndex > 0 ? sliderIndex - 1 : 2);
@@ -23,8 +23,12 @@ const Slider = () => {
         className="Wraper_slider "
         style={{ transform: `translate( ${sliderIndex * -100}vw)` }}
       >
-        {sliderItems.map((item) => (
-          <div className="Slider_1 " style={{ backgroundColor: item.bg }}>
+        {sliderItems.map((item, i) => (
+          <div
+            className="Slider_1"
+            key={i}
+            style={{ backgroundColor: item.bg }}
+          >
             <div className=" flex-1 h-full img_con">
               <img className="h-96" src={item.img}></img>
             </div>
