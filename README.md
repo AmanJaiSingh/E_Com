@@ -73,7 +73,5 @@ Become a part of the Enchanting E-Commerce Extravaganza community! Contribute yo
 🚀 Deploy with Panache
 Ready to share this enchanting experience with the world? Follow our deployment guide to deploy with panache.
 
-🌟 License to Thrill
-This project is licensed under the MIT License. Feel free to weave your own spells with it.
 
 Happy Shopping! 🌟🛒✨
