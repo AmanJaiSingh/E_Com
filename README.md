@@ -9,8 +9,6 @@ Welcome to the Enchanting E-Commerce Extravaganza, where the digital world and r
 - [Technological Spellbook](#technological-spellbook)
 - [Embark on the Adventure](#embark-on-the-adventure)
 - [Contributor's Oasis](#contributors-oasis)
-- [Deploy with Panache](#deploy-with-panache)
-- [License to Thrill](#license-to-thrill)
 
 ## 🌈 Magical Introduction
 
@@ -44,7 +42,7 @@ Ready to embark on a magical journey through the Enchanting E-Commerce Extravaga
 
 1. **Summon the Repository**:
    ```bash
-   git clone https://github.com/your-username/enchanting-ecommerce.git
+   git clone https://github.com/AmanJaiSingh/E_Com.git
 Prepare the Potions:
 
 bash
@@ -70,8 +68,7 @@ Visit http://localhost:3000 in your browser to witness the magic unfold.
 🌈 Contributors Oasis
 Become a part of the Enchanting E-Commerce Extravaganza community! Contribute your magic by following our contributor guidelines.
 
-🚀 Deploy with Panache
-Ready to share this enchanting experience with the world? Follow our deployment guide to deploy with panache.
+
 
 
 Happy Shopping! 🌟🛒✨
